@@ -1,1 +1,3 @@
-# GAN-Technology-Watch
+# Technology Watch on Generative Adversarial Networks
+
+This repository hosts my [website](https://pascalgodbillot.github.io/) related to my technology watch on Generative Adversarial Networks.
