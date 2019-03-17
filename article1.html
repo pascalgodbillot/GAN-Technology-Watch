@@ -105,7 +105,7 @@
                 <p style="text-align:justify; font-size:160%; font-weight:400;">&emsp;
                     Le terme "génératif" évoque l'objectif global du modèle : créer de nouvelles données. Les données
                     qu'un GAN apprendra
-                    à générer dépendant du choix de l'ensemble d’entraînement - par exemple, si nous voulons qu'un GAN
+                    à générer dépendent du choix de l'ensemble d’entraînement - par exemple, si nous voulons qu'un GAN
                     peigne comme Leonardo
                     da Vinci, nous utiliserons un ensemble de données d’entraînement composé d'œuvres du peintre.
                 </p>
@@ -150,8 +150,8 @@
                 <div style="height:30px;font-size:20px;">&nbsp;</div>
 
                 <p style="text-align:justify; font-size:160%; font-weight:400;">&emsp;
-                    Bien que les mathématiques qui sous-tendent les GAN soient assez complexes, il existe de nombreuses
-                    analogies avec
+                    Bien que les mathématiques qui sous-tendent les GANs soient assez complexes pour le commun des mortels,
+                    il existe de nombreuses analogies avec
                     le monde réel qui peuvent rendre l'intuition qui les sous-tend plus facile à comprendre. Nous
                     pouvons prendre l'exemple
                     d'un faussaire d'art (le "générateur") qui essaie de tromper un expert en art (le "discriminateur").
@@ -162,7 +162,7 @@
                     dire si un tableau
                     particulier est authentique, plus le faussaire doit améliorer son art pour éviter d'être pris en
                     flagrant délit.
-                    Une autre métaphore souvent utilisée pour décrire les GAN - une métaphore que Ian Goodfellow
+                    Une autre métaphore souvent utilisée pour décrire les GANs - une métaphore que Ian Goodfellow
                     lui-même aime utiliser -
                     est celle d'un criminel (le "générateur") qui contrefait de l'argent et d'un détective (le
                     "discriminateur") qui tente
@@ -174,14 +174,14 @@
                 <div style="height:20px;font-size:20px;">&nbsp;</div>
 
                 <p style="text-align:justify; font-size:160%; font-weight:400;">&emsp;
-                    L'une des applications les plus courantes des GAN est la génération d'images. Si on dispose d’une
+                    L'une des applications les plus courantes des GANs est la génération d'images. Si on dispose d’une
                     certaine quantité d’images
                     représentant des visages, un GAN peut donc apprendre à générer des images de visages réalistes sans
                     jamais répliquer aucune
                     des images individuellement. En réalité, avec un nombre assez conséquent d’images, le réseau apprend
                     la représentation du
-                    concept de visage humain à partir des simples échantillons et est en mesure de générer des images
-                    qui respecte ce standard.
+                    concept de visage humain à partir des simples échantillons fournis dans la base de données et est en
+                    mesure de générer des images qui respecte ce standard.
                     De plus, cela est fait sans qu’à aucun moment le générateur n'ait un accès direct aux images du jeu
                     d’entraînement.
 
@@ -206,7 +206,7 @@
                 <div style="height:30px;font-size:20px;">&nbsp;</div>
 
                 <p style="text-align:justify; font-size:160%; font-weight:400;">&emsp;
-                    A titre d’exemple, ci-dessous, les dernières images de visages hyperréalistes générées par NVIDIA en
+                    A titre d’exemple, ci-dessous, les dernières images de visages hyper-réalistes générées par NVIDIA en
                     2018 ainsi que les
                     images réelles utilisée lors de l’apprentissage. Les résultats sont impressionants et à première vue
                     la difficulté pour démêler le
@@ -370,7 +370,18 @@
                     discriminateur. Ainsi, bien que le
                     générateur ne puisse pas fournir de copie d’une donnée existante car il n’y a tout simplement pas
                     accès, <b>la diversité n’est
-                        pas toujours garantie : c'est le mode collapse</b>. Si les images générées sont bien « nouvelles
+                        pas toujours garantie : c'est le mode collapse</b>. La figure suivante illustre ce phénomène.
+                </p>
+
+                <div style="height:20px;font-size:20px;">&nbsp;</div>
+                <p align="center">
+                    <img width="784" height="441" src="./assets/images/mode-collapse-bis.jpg" class="img-responsive" alt="" align="middle">
+                </p>
+                <p></p>
+                <div style="height:30px;font-size:20px;">&nbsp;</div>
+
+                <p style="text-align:justify; font-size:160%; font-weight:400;">
+                    Si les images générées sont bien « nouvelles
                     » au sens premier du terme (aucune ne sont exactement
                     similaires), il se peut que le générateur prenne peu en compte l’impulsion aléatoire initiale et
                     génère ainsi fréquemment des
